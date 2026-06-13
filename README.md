@@ -6,7 +6,7 @@ Zapatilla Rosa es una página web de venta de zapatos para mujer desarrollada co
 
 * Diseño adaptable para computadoras, tablets y celulares.
 * Menú de navegación responsive.
-* Carrusel interactivo con promociones y descuentos.
+* Carrusel interactivo.
 * Catálogo de productos cargado dinámicamente desde una API.
 * Visualización de precios y descuentos.
 * Botón de compra directa mediante WhatsApp.
@@ -18,10 +18,10 @@ Zapatilla Rosa es una página web de venta de zapatos para mujer desarrollada co
 
 ## Tecnologías utilizadas
 
-* HTML5
-* CSS3
+* HTML 5
+* CSS 3
 * Tailwind CSS
-* JavaScript
+* JavaScript (ES6)
 
 ## Objetivo del proyecto
 

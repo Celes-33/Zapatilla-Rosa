@@ -21,7 +21,7 @@ Zapatilla Rosa es una página web de venta de zapatos para mujer desarrollada co
 * HTML5
 * CSS3
 * Tailwind CSS
-* JavaScript (ES6)
+* JavaScript
 
 ## Objetivo del proyecto
 

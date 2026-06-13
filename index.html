@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zapatilla Rosa</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="bg-pink-50">
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-lg shadow-md"
+    >
+      <nav
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div
+            class="w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-rose-600 flex items-center justify-center shadow-lg logo-bounce"
+          >
+            <span class="text-white text-2xl font-bold">Z</span>
+          </div>
+          <div>
+            <h1
+              class="text-2xl font-bold text-gray-800 group-hover:text-pink-600 transition"
+            >
+              Zapatilla Rosa
+            </h1>
+            <p class="text-xs text-gray-500 -mt-1">Zapatos para mujer</p>
+          </div>
+        </a>
+
+        <!-- Menú Desktop -->
+        <ul class="hidden lg:flex items-center gap-8 font-medium text-gray-700">
+          <li>
+            <a href="#" class="menu-link">Inicio</a>
+          </li>
+
+          <li class="relative group">
+            <button class="menu-link flex items-center gap-1">
+              Colecciones
+              <span class="text-sm">⌄</span>
+            </button>
+
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">Tacones Elegantes</a>
+              <a href="#" class="dropdown-item">Sandalias</a>
+              <a href="#" class="dropdown-item">Botines</a>
+              <a href="#" class="dropdown-item">Tenis Casuales</a>
+            </div>
+          </li>
+
+          <li class="relative group">
+            <button class="menu-link flex items-center gap-1">
+              Categorías
+              <span class="text-sm">⌄</span>
+            </button>
+
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">Zapatos de fiesta</a>
+              <a href="#" class="dropdown-item">Zapatos de oficina</a>
+              <a href="#" class="dropdown-item">Zapatos cómodos</a>
+              <a href="#" class="dropdown-item">Promociones</a>
+            </div>
+          </li>
+
+          <li>
+            <a href="#" class="menu-link">Nosotros</a>
+          </li>
+
+          <li>
+            <a href="#" class="menu-link">Contacto</a>
+          </li>
+        </ul>
+
+        <!-- Botón WhatsApp Desktop -->
+        <a
+          href="https://wa.me/573168244759?text=Hola,%20quiero%20más%20información%20sobre%20los%20zapatos"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden lg:inline-flex items-center gap-2 bg-green-500 text-white px-5 py-3 rounded-full font-semibold shadow-lg hover:bg-green-600 hover:scale-105 transition duration-300"
+        >
+          WhatsApp
+        </a>
+
+        <!-- Botón móvil -->
+        <button id="menuBtn" class="lg:hidden text-3xl text-pink-600">
+          ☰
+        </button>
+      </nav>
+
+      <!-- Menú Mobile -->
+      <div id="mobileMenu" class="mobile-menu lg:hidden">
+        <a href="#" class="mobile-link">Inicio</a>
+
+        <button class="mobile-dropdown-btn">Colecciones <span>⌄</span></button>
+        <div class="mobile-dropdown">
+          <a href="#">Tacones Elegantes</a>
+          <a href="#">Sandalias</a>
+          <a href="#">Botines</a>
+          <a href="#">Tenis Casuales</a>
+        </div>
+
+        <button class="mobile-dropdown-btn">Categorías <span>⌄</span></button>
+        <div class="mobile-dropdown">
+          <a href="#">Zapatos de fiesta</a>
+          <a href="#">Zapatos de oficina</a>
+          <a href="#">Zapatos cómodos</a>
+          <a href="#">Promociones</a>
+        </div>
+
+        <a href="#" class="mobile-link">Nosotros</a>
+        <a href="#" class="mobile-link">Contacto</a>
+
+        <!-- Botón WhatsApp Mobile -->
+        <a
+          href="https://wa.me/573168244759?text=Hola,%20quiero%20más%20información%20sobre%20los%20zapatos"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-4 inline-flex justify-center bg-green-500 text-white px-5 py-3 rounded-full font-semibold shadow-lg hover:bg-green-600 transition"
+        >
+          Comprar por WhatsApp
+        </a>
+      </div>
+    </header>
+    <!-- Barra superior de beneficios -->
+    <section
+      class="w-full bg-black text-white text-sm md:text-base font-semibold"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 py-3 grid grid-cols-2 md:grid-cols-4 gap-3 text-center"
+      >
+        <div class="flex items-center justify-center gap-2">
+          <span>💳</span>
+          <p>Paga hasta en 6 cuotas</p>
+        </div>
+
+        <div class="flex items-center justify-center gap-2">
+          <span>🔄</span>
+          <p>Cambios fáciles a 90 días</p>
+        </div>
+
+        <div class="flex items-center justify-center gap-2">
+          <span>🚚</span>
+          <p>Compra y paga en casa</p>
+        </div>
+
+        <div class="flex items-center justify-center gap-2">
+          <span>🏬</span>
+          <p>Retira en tienda gratis</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carrusel -->
+    <section
+      id="shoeCarousel"
+      class="relative w-full h-[620px] overflow-hidden bg-black"
+    >
+      <!-- Slide 1 -->
+      <article
+        class="carousel-slide active"
+        style="
+          background-image: url(&quot;https://i.pinimg.com/736x/ce/7e/6c/ce7e6c6743dc93854c586243efca8e80.jpg&quot;);
+        "
+      >
+        <div class="absolute inset-0 bg-black/55"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/45 to-transparent"
+        ></div>
+
+        <div class="carousel-pattern">SALE SALE SALE</div>
+
+        <div
+          class="relative z-10 max-w-7xl mx-auto h-full px-6 flex items-center"
+        >
+          <div class="max-w-xl text-white">
+            <p class="slide-small-text">No te quedes sin tus ofertas</p>
+
+            <h2 class="slide-title">Black <span>Days</span></h2>
+
+            <p class="slide-description">
+              Zapatos para mujer con estilo, comodidad y precios especiales por
+              tiempo limitado.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 mt-8">
+              <a href="#productos" class="btn-primary"> Comprar ahora </a>
+
+              <a
+                href="https://wa.me/573168244759?text=Hola,%20quiero%20más%20información%20sobre%20los%20zapatos"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-whatsapp"
+              >
+                Comprar por WhatsApp
+              </a>
+            </div>
+
+            <div class="flex gap-8 mt-8 text-sm text-white/80">
+              <p>Pide online<br /><span>retira en tienda</span></p>
+              <p>Pago<br /><span>contra entrega</span></p>
+            </div>
+          </div>
+
+          <div class="hidden lg:block ml-auto text-right text-white">
+            <p class="text-xl italic tracking-widest">DEL 02 DE JUNIO AL 09</p>
+            <p class="mt-4 text-3xl font-semibold">Todo al</p>
+            <h3 class="discount-text">30%</h3>
+            <p class="text-7xl font-black -mt-8">OFF</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 2 -->
+      <article
+        class="carousel-slide"
+        style="
+          background-image: url(&quot;https://i.pinimg.com/736x/1e/0c/00/1e0c00f0c21593f7d763d055ed7f22bc.jpg&quot;);
+        "
+      >
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-rose-950/90 via-black/40 to-transparent"
+        ></div>
+
+        <div class="carousel-pattern">NEW NEW NEW</div>
+
+        <div
+          class="relative z-10 max-w-7xl mx-auto h-full px-6 flex items-center"
+        >
+          <div class="max-w-xl text-white">
+            <p class="slide-small-text">Nueva colección</p>
+
+            <h2 class="slide-title">Elegancia <span>Femenina</span></h2>
+
+            <p class="slide-description">
+              Tacones, sandalias y botines perfectos para ocasiones especiales.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 mt-8">
+              <a href="#productos" class="btn-primary"> Ver colección </a>
+
+              <a
+                href="https://wa.me/573168244759?text=Hola,%20quiero%20ver%20la%20nueva%20colección%20de%20zapatos"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-whatsapp"
+              >
+                Asesoría por WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="hidden lg:block ml-auto text-right text-white">
+            <p class="text-xl italic tracking-widest">ESTILO Y COMODIDAD</p>
+            <h3 class="discount-text">20%</h3>
+            <p class="text-7xl font-black -mt-8">OFF</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 3 -->
+      <article
+        class="carousel-slide"
+        style="
+          background-image: url(&quot;https://i.pinimg.com/736x/36/b5/98/36b5980773ac10fb7f00effa8b270836.jpg&quot;);
+        "
+      >
+        <div class="absolute inset-0 bg-black/55"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-black/90 via-pink-950/45 to-transparent"
+        ></div>
+
+        <div class="carousel-pattern">STYLE STYLE STYLE</div>
+
+        <div
+          class="relative z-10 max-w-7xl mx-auto h-full px-6 flex items-center"
+        >
+          <div class="max-w-xl text-white">
+            <p class="slide-small-text">Lo más vendido</p>
+
+            <h2 class="slide-title">Pisa fuerte <span>con estilo</span></h2>
+
+            <p class="slide-description">
+              Diseños modernos para oficina, eventos, salidas casuales y looks
+              diarios.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 mt-8">
+              <a href="#productos" class="btn-primary"> Explorar modelos </a>
+
+              <a
+                href="https://wa.me/573168244759?text=Hola,%20quiero%20comprar%20zapatos%20para%20mujer"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-whatsapp"
+              >
+                Hablar con asesor
+              </a>
+            </div>
+          </div>
+
+          <div class="hidden lg:block ml-auto text-right text-white">
+            <p class="text-xl italic tracking-widest">OFERTAS EXCLUSIVAS</p>
+            <h3 class="discount-text">15%</h3>
+            <p class="text-7xl font-black -mt-8">OFF</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Flechas -->
+      <button id="prevSlide" class="carousel-arrow left-5">‹</button>
+
+      <button id="nextSlide" class="carousel-arrow right-5">›</button>
+
+      <!-- Puntos -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+        <button class="carousel-dot active" data-slide="0"></button>
+        <button class="carousel-dot" data-slide="1"></button>
+        <button class="carousel-dot" data-slide="2"></button>
+      </div>
+
+      <!-- Botón flotante WhatsApp -->
+      <a
+        href="https://wa.me/573168244759?text=Hola,%20quiero%20más%20información%20sobre%20los%20zapatos"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-green-500 text-white flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition"
+      >
+        ☎️
+      </a>
+    </section>
+
+    <main class="pt-32 text-center">
+      <h2 class="text-4xl font-bold text-gray-800">
+        Encuentra los zapatos perfectos para ti
+      </h2>
+      <p class="mt-4 text-gray-600">
+        Elegancia, comodidad y estilo en un solo lugar.
+      </p>
+
+      <!-- Sección Mujer -->
+      <section class="w-full bg-white py-10 px-4 md:px-8" id="mujer">
+        <div class="max-w-7xl mx-auto">
+          <!-- Título -->
+          <div class="mb-8">
+            <h2 class="text-5xl md:text-6xl font-light text-black">Mujer</h2>
+          </div>
+
+          <!-- Grid de categorías -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            <!-- Card 1 -->
+            <a href="#" class="category-card group">
+              <img
+                src="https://i.pinimg.com/736x/de/d4/2f/ded42faa7b5b41b554bf81d0300e4a50.jpg"
+                alt="Accesorios"
+                class="category-img"
+              />
+
+              <div class="category-overlay"></div>
+
+              <div class="category-content">
+                <h3>Accesorios</h3>
+              </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="#" class="category-card group">
+              <img
+                src="https://i.pinimg.com/736x/8c/96/fc/8c96fc3f539aaa9678e729b8b19efebd.jpg"
+                alt="Zapatos de vestir"
+                class="category-img"
+              />
+
+              <div class="category-overlay"></div>
+
+              <div class="category-content">
+                <h3>Zapatos<br />de vestir</h3>
+              </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="#" class="category-card group">
+              <img
+                src="https://i.pinimg.com/736x/19/d2/2a/19d22a3a181b3bb70614418877f491e4.jpg"
+                alt="Zapatos casuales"
+                class="category-img"
+              />
+
+              <div class="category-overlay"></div>
+
+              <div class="category-content">
+                <h3>Zapatos<br />casuales</h3>
+              </div>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="#" class="category-card group">
+              <img
+                src="https://i.pinimg.com/736x/d5/6e/12/d56e12bd4d4d7eaf9ad9488dacf0030b.jpg"
+                alt="Tennis"
+                class="category-img"
+              />
+
+              <div class="category-overlay"></div>
+
+              <div class="category-content">
+                <h3>Tennis</h3>
+              </div>
+            </a>
+
+            <!-- Card 5 -->
+            <a href="#" class="category-card group">
+              <img
+                src="https://i.pinimg.com/736x/f4/d1/ab/f4d1ab5c221b51254a60d1e1f875b733.jpg"
+                alt="Botas y botines"
+                class="category-img"
+              />
+
+              <div class="category-overlay"></div>
+
+              <div class="category-content">
+                <h3>Botas y<br />Botines</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Sección productos zapatos mujer -->
+      <section class="w-full bg-white py-12 px-4 md:px-8" id="productos">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex items-center justify-between mb-8">
+            <div>
+              <h2 class="text-4xl md:text-5xl font-light text-black">Mujer</h2>
+              <p class="text-gray-500 mt-2">Zapatos destacados para mujer</p>
+            </div>
+
+            <button
+              id="reloadProducts"
+              class="hidden md:inline-flex px-5 py-2 rounded-full border border-black text-black hover:bg-black hover:text-white transition"
+            >
+              Actualizar
+            </button>
+          </div>
+
+          <!-- Loading -->
+          <div id="productsLoading" class="text-center py-12 text-gray-500">
+            Cargando productos...
+          </div>
+
+          <!-- Error -->
+          <div
+            id="productsError"
+            class="hidden text-center py-12 text-red-600 font-semibold"
+          >
+            No se pudieron cargar los productos.
+          </div>
+
+          <!-- Grid productos -->
+          <div
+            id="productsGrid"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+          >
+            <!-- Aquí se cargan las cards desde JS -->
+          </div>
+        </div>
+      </section>
+      <!-- Sección de Reseñas -->
+      <section class="reviews-section">
+        <h2 class="reviews-title">Opiniones de nuestros clientes</h2>
+
+        <div class="stars-container">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+
+        <textarea
+          id="reviewText"
+          placeholder="Escribe tu experiencia con nuestros zapatos..."
+        ></textarea>
+
+        <button id="submitReview" class="review-btn">Enviar reseña</button>
+
+        <div id="reviewsContainer"></div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-black text-white mt-16">
+      <div
+        class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-4 gap-10"
+      >
+        <!-- Marca -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-rose-600 flex items-center justify-center shadow-lg"
+            >
+              <span class="text-white text-2xl font-bold">Z</span>
+            </div>
+
+            <div>
+              <h2 class="text-2xl font-bold">Zapatilla Rosa</h2>
+              <p class="text-sm text-gray-400">Zapatos para mujer</p>
+            </div>
+          </div>
+
+          <p class="text-gray-400 leading-relaxed">
+            Encuentra zapatos modernos, cómodos y elegantes para cada ocasión.
+          </p>
+        </div>
+
+        <!-- Enlaces -->
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-pink-400">Menú</h3>
+
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="#" class="footer-link">Inicio</a></li>
+            <li><a href="#mujer" class="footer-link">Mujer</a></li>
+            <li><a href="#productos" class="footer-link">Productos</a></li>
+            <li><a href="#" class="footer-link">Promociones</a></li>
+            <li><a href="#" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Categorías -->
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-pink-400">Categorías</h3>
+
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="#" class="footer-link">Tacones</a></li>
+            <li><a href="#" class="footer-link">Sandalias</a></li>
+            <li><a href="#" class="footer-link">Botas y botines</a></li>
+            <li><a href="#" class="footer-link">Tennis</a></li>
+            <li><a href="#" class="footer-link">Zapatos casuales</a></li>
+          </ul>
+        </div>
+
+        <!-- Redes sociales -->
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-pink-400">Síguenos</h3>
+
+          <p class="text-gray-400 mb-5">
+            Conoce nuestras novedades, descuentos y nuevos modelos.
+          </p>
+
+          <div class="flex items-center gap-4">
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon bg-blue-600"
+              aria-label="Facebook"
+            >
+              f
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600"
+              aria-label="Instagram"
+            >
+              ◎
+            </a>
+
+            <!-- TikTok -->
+            <a
+              href="https://www.tiktok.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon bg-white text-black"
+              aria-label="TikTok"
+            >
+              ♪
+            </a>
+
+            <!-- WhatsApp -->
+            <a
+              href="https://wa.me/573168244759?text=Hola,%20quiero%20más%20información%20sobre%20los%20zapatos"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon bg-green-500"
+              aria-label="WhatsApp"
+            >
+              ☎️
+            </a>
+          </div>
+
+          <a
+            href="https://wa.me/573168244759?text=Hola,%20quiero%20más%20información%20sobre%20los%20zapatos"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex mt-6 px-6 py-3 rounded-full bg-green-500 text-white font-bold hover:bg-green-600 hover:scale-105 transition duration-300"
+          >
+            Comprar por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Línea inferior -->
+      <div class="border-t border-white/10">
+        <div
+          class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-sm"
+        >
+          <p>© 2026 Zapatilla Rosa. Todos los derechos reservados.</p>
+
+          <div class="flex gap-5">
+            <a href="#" class="hover:text-pink-400 transition"
+              >Política de privacidad</a
+            >
+            <a href="#" class="hover:text-pink-400 transition"
+              >Términos y condiciones</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
